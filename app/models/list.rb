@@ -3,5 +3,6 @@ class List < ApplicationRecord
 
   validates :title, presence:true
   validates :body, presence:true
-  validates :image, presence:true
+  # find/find_by/whereのカリキュラムを学習するため、コメントアウト
+  # validates :image, presence:true
 end
