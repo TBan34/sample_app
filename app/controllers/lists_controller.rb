@@ -1,10 +1,8 @@
 class ListsController < ApplicationController
   def new
-    # Viewへ渡すためのインスタンス変数に空のモデルオブジェクトを生成する。
     @list=List.new
   end
 
-# 以下を追加
   def create
     @list=List.new(list_params)
     if @list.save
@@ -19,7 +17,7 @@ class ListsController < ApplicationController
     @lists=List.all
   end
 
-  def show
+compile-cache-yaml  def show
     @list=List.find(params[:id])
   end
 
@@ -34,9 +32,9 @@ class ListsController < ApplicationController
   end
 
   def destroy
-    list=List.find(params[:id]) # データ（レコード）を１件取得
-    list.destroy # データ（レコード）を削除
-    redirect_to'/lists' # 投稿一覧画面へリダイレクト
+    list=List.find(params[:id])
+    list.destroy
+    redirect_to'/lists'
   end
 
   private
