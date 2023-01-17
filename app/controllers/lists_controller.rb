@@ -17,7 +17,7 @@ class ListsController < ApplicationController
     @lists=List.all
   end
 
-compile-cache-yaml  def show
+  def show
     @list=List.find(params[:id])
   end
 
